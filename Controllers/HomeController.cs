@@ -1,5 +1,5 @@
 using System.Diagnostics;
-using Lab3_1_templ.Models;
+//using Lab3_1_templ.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lab3_1_templ.Controllers
@@ -23,10 +23,6 @@ namespace Lab3_1_templ.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+       
     }
 }
