@@ -35,6 +35,13 @@ namespace Lab3_1_templ.Controllers
             return View("Thanks", guestResponse);
         }
 
+        public ViewResult ListResponses()
+        {
+            return View(Repository.Responses
+            .Where(r => r.WillAttend == true));
+        }
+
+
 
 
     }
