@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using Lab3_1_templ.Models;
+
 //using Lab3_1_templ.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,11 +20,22 @@ namespace Lab3_1_templ.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult RsvpForm()
         {
             return View();
         }
 
-       
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            // TODO: store response from guest
+          
+            Repository.AddResponse(guestResponse);
+            return View("Thanks", guestResponse);
+        }
+
+
+
     }
 }
