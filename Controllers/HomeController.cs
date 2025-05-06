@@ -18,7 +18,7 @@ namespace Lab3_1_templ.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult RsvpForm()
         {
             return View();
         }
